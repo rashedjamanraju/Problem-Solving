@@ -1,8 +1,8 @@
+// https://atcoder.jp/contests/abc222/tasks/abc222_a
 #include <bits/stdc++.h>
 using namespace std;
 
 #define endl "\n"
-
 using ll = long long;
 using pii = pair<int, int>;
 using vi = vector<int>;
@@ -19,19 +19,22 @@ void fast_io() {
 
 void solve() {
   // Write your solution here
+  int n;
+  cin >> n;
+  printf("%04d", n);
 }
 
 int main() {
   fast_io();
 
-  int t;
-  cin >> t;
+  // int t;
+  // cin >> t;
 
-  while (t--) {
-    solve();
-  }
+  // while (t--) {
+  //   solve();
+  // }
 
-  // solve();
+  solve();
 
   return 0;
 }
