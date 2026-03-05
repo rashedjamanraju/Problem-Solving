@@ -20,17 +20,13 @@ void solve() {
   // Write your solution here
   int x, y;
   cin >> x >> y;
-  if (x == y) {
-    cout << x + y << endl;
-  } else {
-    int diff = abs(x - y);
-    if (diff >= 2) {
-      cout << x + (x - 1) << endl;
-    } else if (diff == 1) {
-      cout << x + y << endl;
-    } else {
-      cout << 2 * x << endl;
-    }
+  int mx=max(x,y);
+  int mn=min(x,y);
+  if(mx-mn==0){
+  	cout<<2*mx<<endl;
+  }
+  else{
+  	cout<<mx+(mx-1)<<endl;
   }
 }
 
