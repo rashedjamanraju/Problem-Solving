@@ -1,4 +1,4 @@
-// http://atcoder.jp/contests/abc220/tasks/abc220_a
+// https://codeforces.com/problemset/problem/633/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,7 +12,7 @@ using vll = vector<long long>;
 const int MOD = 1e9 + 7;
 const double PI = 3.141592653589793;
 
-// ---------- Fast IO ----------s
+// ---------- Fast IO ----------
 void fast_io() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
@@ -22,11 +22,19 @@ void solve() {
   // Write your solution here
   int a, b, c;
   cin >> a >> b >> c;
-  if ((b / c) * c >= a) {
-    cout << (b / c) * c << endl;
-  } else {
-    cout << -1 << endl;
+  bool ans = false;
+  for (int i = 0; i <= c; i++) {
+    for (int j = 0; j <= c; j++) {
+      if (a * i + b * j == c) {
+        ans = true;
+        break;
+      }
+    }
   }
+  if (ans)
+    cout << "YES" << endl;
+  else
+    cout << "NO" << endl;
 }
 
 int main() {
