@@ -23,7 +23,7 @@ void solve() {
   unsigned long long A, B, C;
   cin >> A >> B >> C;
   if (A * A + B * B < C * C)
-    cout << "Yes";
+    cout << "Yes";ss
   else
     cout << "No";
 }
@@ -41,3 +41,4 @@ int main() {
 
   return 0;
 }
+
