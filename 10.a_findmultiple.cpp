@@ -32,14 +32,14 @@ void solve() {
 int main() {
   fast_io();
 
-  int t;
-  cin >> t;
+  // int t;
+  // cin >> t;
 
-  while (t--) {
-    solve();
-  }
+  // while (t--) {
+  //   solve();
+  // }
 
-  // solve();
+  solve();
 
   return 0;
 }
