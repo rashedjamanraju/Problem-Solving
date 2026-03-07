@@ -1,4 +1,3 @@
-// https://www.codechef.com/problems/MOVHYPE
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -22,18 +21,44 @@ void solve() {
   // Write your solution here
   int n;
   cin >> n;
-  int k = 2 * n + 2;
-  vector<int> v(k, 0);
-  for (int i = 1; i < k; i += 2) {
+  vector<int> v(n, 0);
+  map<int, int> mp;
+  for (int i = 0; i < n; ++i) {
+    /* code */
     cin >> v[i];
+    mp[v[i]] = i;
   }
 
-  int mn = INT_MAX;
-  for (int i = 1; i < k - 1; i += 2) {
-    int mx = max(v[i], v[i + 2]);
-    mn = min(mx, mn);
+  if (n == 1) {
+    cout << v[0] << endl;
+  } else {
+    if (mp[n] == 0) {
+      int k = n - 1;
+      int index = 1;
+
+      for (int i = 1; i < n; i++) {
+        if (v[i] == k) {
+          k--;
+          index++;
+        } else {
+          break;
+        }
+      }
+
+      reverse(v.begin() + index, v.begin() + mp[k] + 1);
+      for (int i = 0; i < n; ++i) {
+        cout << v[i] << " ";
+      }
+      cout << endl;
+
+    } else {
+      reverse(v.begin(), v.begin() + (mp[n] + 1));
+      for (int i = 0; i < n; i++) {
+        cout << v[i] << " ";
+      }
+      cout << endl;
+    }
   }
-  cout << mn << endl;
 }
 
 int main() {
