@@ -126,6 +126,7 @@ int main() {
 
 /*
         My another logic
+        (amar ei idea ashche but gpt diye generate kore disi eita)
         ========================
         void solve() {
     int s, t;
@@ -157,7 +158,7 @@ int main() {
 }
 
 
-
+s
 Note (কেন এটা কাজ করবে — proof সহ)
 /*
     Optimization idea:
