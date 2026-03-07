@@ -123,3 +123,110 @@ int main() {
 
         which is easily fast enough.
 */
+
+/*
+        My another logic
+        ========================
+        void solve() {
+    int s, t;
+    cin >> s >> t;
+
+    int cnt = 0;
+
+    for (int a = 0; a <= s; a++) {
+
+        // check with global 0 (b=0,c=0)
+        if (a + 0 + 0 > s) break;
+
+        for (int b = 0; b <= s; b++) {
+
+            // check with global 0 (c=0)
+            if (a + b + 0 > s) break;
+
+            for (int c = 0; c <= s; c++) {
+
+                if (a + b + c > s) break;
+
+                if (1LL * a * b * c <= t)
+                    cnt++;
+            }
+        }
+    }
+
+    cout << cnt << endl;
+}
+
+
+
+Note (কেন এটা কাজ করবে — proof সহ)
+/*
+    Optimization idea:
+
+    Condition:
+        a + b + c <= S
+
+    We iterate a,b,c from 0..S.
+
+    -------------------------------------------------
+
+    Case 1: outer loop (a)
+
+        if (a + 0 + 0 > S)
+
+    Since b,c >= 0
+
+        a + b + c >= a
+
+    If a > S:
+        a + b + c > S  for every b,c
+
+    Therefore no valid triple exists for this a
+    and we can safely break the loop.
+
+    -------------------------------------------------
+
+    Case 2: second loop (b)
+
+        if (a + b + 0 > S)
+
+    Since c >= 0
+
+        a + b + c >= a + b
+
+    If a + b > S:
+        a + b + c > S for all c
+
+    So this b and all larger b will be invalid.
+    Hence we break the loop.
+
+    -------------------------------------------------
+
+    Case 3: third loop (c)
+
+        if (a + b + c > S)
+
+    Since c increases in the loop,
+    the sum will only increase further.
+
+    Therefore all next c values will also be invalid.
+
+    So we break.
+
+    -------------------------------------------------
+
+    This technique is called:
+        "pruning the search space"
+
+    -------------------------------------------------
+
+    Complexity:
+
+        Worst case: S^3
+        But many loops terminate early due to break.
+
+        S <= 100
+        => at most about 1e6 operations
+        => easily fits in time.
+*/
+
+*/
