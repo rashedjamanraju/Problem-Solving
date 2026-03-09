@@ -1,3 +1,4 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/B
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -57,8 +58,8 @@ void solve() {
   string s;
   getline(cin, s);
 
-  int pos = s.find('\\');
-  cout << s.substr(0, pos);
+  int pos = s.find('\\');// seraches the index of first occurence of '\'
+  cout << s.substr(0, pos);// s.substr(starting_index,length) 
 }
 
 int main() {
