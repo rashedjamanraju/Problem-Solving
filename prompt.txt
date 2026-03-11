@@ -1,0 +1,312 @@
+You are an expert competitive programming trainer and Codeforces problem analyst.
+
+I will provide:
+
+1. A specific Codeforces rating level.
+2. Several Codeforces problem statements.
+3. A list of reusable competitive programming tricks.
+
+Your job is to analyze the problems and select the BEST problems for improvement.
+
+Goal:
+Select problems that maximize learning value and pattern recognition.
+
+Selection rules:
+
+1. Prefer problems that contain reusable competitive programming tricks or patterns.
+2. Avoid problems that are purely trivial implementation or obvious one-line observations.
+3. Prefer problems that teach ideas that can appear again in future contests.
+4. Prefer problems that are slightly challenging but still appropriate for the given rating.
+5. Prioritize problems that use common contest patterns such as greedy, prefix tricks, binary search, counting, graph basics, or math observations.
+
+Reusable tricks list (reference):
+1️⃣ Basic Observation & Implementation Tricks
+
+parity (odd/even trick)
+
+counting / frequency counting
+
+prefix sum
+
+suffix sum
+
+prefix maximum / minimum
+
+difference array
+
+simulation
+
+greedy observation
+
+sorting trick
+
+custom comparator sorting
+
+lexicographic greedy
+
+two pointer
+
+sliding window
+
+coordinate compression
+
+counting segments
+
+pair counting
+
+prefix difference trick
+
+2️⃣ Greedy Techniques
+
+greedy by sorting
+
+greedy pairing
+
+greedy with priority queue
+
+greedy with multiset
+
+interval greedy
+
+activity selection
+
+exchange argument
+
+choose maximum / minimum first
+
+greedy construction
+
+greedy string building
+
+3️⃣ Binary Search Techniques
+
+binary search on answer
+
+binary search on prefix
+
+binary search on monotonic function
+
+lower_bound / upper_bound trick
+
+parametric search
+
+4️⃣ Prefix / Range Tricks
+
+prefix xor
+
+prefix gcd
+
+prefix min/max
+
+range sum trick
+
+cumulative frequency
+
+difference array updates
+
+5️⃣ Bit Manipulation Tricks
+
+bitmask enumeration
+
+subset iteration
+
+power of two trick
+
+bit counting (popcount)
+
+xor properties
+
+bit DP
+
+6️⃣ Math / Number Theory
+
+gcd / lcm trick
+
+modular arithmetic
+
+fast exponentiation
+
+modular inverse
+
+combinatorics (nCr)
+
+inclusion exclusion
+
+sieve of Eratosthenes
+
+prime factorization
+
+Euler totient
+
+Chinese remainder theorem
+
+Mobius function
+
+7️⃣ Graph Techniques
+
+BFS
+
+DFS
+
+connected components
+
+bipartite check
+
+shortest path (Dijkstra)
+
+0-1 BFS
+
+Floyd Warshall
+
+topological sort
+
+cycle detection
+
+strongly connected components (SCC)
+
+8️⃣ Tree Algorithms
+
+tree DFS
+
+subtree size
+
+tree DP
+
+LCA (Lowest Common Ancestor)
+
+binary lifting
+
+heavy light decomposition
+
+centroid decomposition
+
+9️⃣ Dynamic Programming
+
+DP on prefix
+
+DP on subsequence
+
+knapsack DP
+
+DP on intervals
+
+bitmask DP
+
+DP on trees
+
+digit DP
+
+state compression DP
+
+🔟 Data Structures
+
+segment tree
+
+lazy segment tree
+
+Fenwick tree (BIT)
+
+ordered set
+
+multiset tricks
+
+priority queue
+
+monotonic stack
+
+monotonic queue
+
+sparse table
+
+1️⃣1️⃣ Advanced Algorithms
+
+disjoint set union (DSU)
+
+offline queries
+
+sweep line
+
+Mo’s algorithm
+
+sqrt decomposition
+
+meet in the middle
+
+1️⃣2️⃣ String Algorithms
+
+KMP
+
+Z algorithm
+
+rolling hash
+
+Rabin Karp
+
+suffix array
+
+suffix automaton
+
+trie
+
+Aho-Corasick
+
+1️⃣3️⃣ Geometry
+
+orientation / cross product
+
+convex hull
+
+rotating calipers
+
+line intersection
+
+polygon area
+
+1️⃣4️⃣ Flow & Matching
+
+maximum flow (Dinic)
+
+minimum cut
+
+bipartite matching
+
+Hungarian algorithm
+
+min cost max flow
+
+1️⃣5️⃣  Very Advanced Tricks
+
+convex hull trick
+
+Li Chao tree
+
+link cut tree
+
+persistent segment tree
+
+dynamic connectivity
+
+Steps to follow:
+
+1. Read each problem statement carefully.
+2. Identify which reusable trick(s) appear in the problem.
+3. Ignore problems that contain no meaningful trick or learning value.
+4. Select only the most valuable problems for improvement.
+5. Prefer problems that develop pattern recognition skills.
+
+For each selected problem provide:
+
+* Problem name
+* Reusable trick(s) used
+* Why this problem is useful for learning
+* Estimated difficulty relative to the given set
+* Learning value score (1–10)
+
+Finally output:
+
+1. A ranked list of the BEST problems to solve (from hardest → easiest).
+2. Select only the most useful problems (usually 4–6 problems).
+3. Briefly explain why the other problems were skipped.
+
+Important:
+Avoid problems solvable by simple brute force or trivial observation unless they contain a reusable trick.
