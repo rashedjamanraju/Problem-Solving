@@ -1,4 +1,3 @@
-// https://codeforces.com/problemset/problem/2180/A
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -22,6 +21,16 @@ const double PI = 3.141592653589793;
 void fast_io() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
+}
+
+// ------------ GCD ------------
+int __gcd(int a, int b) {
+  while (b != 0) {
+    int r = a % b;
+    a = b;
+    b = r;
+  }
+  return a;
 }
 
 // ---------- 4 Direction Neighbours ----------
@@ -60,16 +69,6 @@ vector<pii> get8Neighbours(int x, int y, int n, int m) {
 
 void solve() {
   // Write your solution here
-  int l, a, b;
-  cin >> l >> a >> b;
-  bool ans_found = false;
-  int ans = a;
-  for (int i = 0; i < l; i++) {
-    int m = (a + (b * i)) % l;
-    ans = max(ans, m);
-  }
-
-  cout << ans << endl;
 }
 
 int main() {
@@ -81,6 +80,8 @@ int main() {
   while (t--) {
     solve();
   }
+
+  // solve()
 
   return 0;
 }

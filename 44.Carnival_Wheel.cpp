@@ -71,6 +71,18 @@ void solve() {
 
   cout << ans << endl;
 }
+/*
+ Efficient using gcd trick
+ (Circular movement + fixed step ⇒ gcd trick)
+--------------------------------
+void solve() {
+  // Write your solution here
+  int l, a, b;
+  cin >> l >> a >> b;
+  int gc_div = __gcd(l, b);
+  cout << l - __gcd(l, b) + a % __gcd(l, b) << '\n';
+}
+*/
 
 int main() {
   fast_io();
