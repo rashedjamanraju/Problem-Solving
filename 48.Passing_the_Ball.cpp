@@ -1,5 +1,5 @@
-// Problem Link:
-
+// Problem Link:https://codeforces.com/contest/2204/problem/A
+// Contest : 01
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -70,38 +70,19 @@ vector<pii> get8Neighbours(int x, int y, int n, int m) {
 }
 
 void solve() {
-  long long a, b, c, m;
-  cin >> a >> b >> c >> m;
-
-  auto lcm = [&](long long x, long long y) { return x / __gcd(x, y) * y; };
-
-  long long ab = lcm(a, b);
-  long long ac = lcm(a, c);
-  long long bc = lcm(b, c);
-  long long abc = lcm(ab, c);
-
-  long long A = m / a;
-  long long B = m / b;
-  long long C = m / c;
-
-  long long AB = m / ab;
-  long long AC = m / ac;
-  long long BC = m / bc;
-  long long ABC = m / abc;
-
-  long long onlyA = A - AB - AC + ABC;
-  long long onlyB = B - AB - BC + ABC;
-  long long onlyC = C - AC - BC + ABC;
-
-  long long AB_only = AB - ABC;
-  long long AC_only = AC - ABC;
-  long long BC_only = BC - ABC;
-
-  long long alice = onlyA * 6 + (AB_only + AC_only) * 3 + ABC * 2;
-  long long bob = onlyB * 6 + (AB_only + BC_only) * 3 + ABC * 2;
-  long long carol = onlyC * 6 + (AC_only + BC_only) * 3 + ABC * 2;
-
-  cout << alice << " " << bob << " " << carol << endl;
+  // Write your solution here
+  int n;
+  cin >> n;
+  string s;
+  cin >> s;
+  // int pos = 0;
+  for (int i = 0; i < n; ++i) {
+    if (s[i] == 'L') {
+      cout << i + 1 << endl;
+      return;
+    }
+  }
+  // cout << pos - 1 << endl;
 }
 
 int main() {
