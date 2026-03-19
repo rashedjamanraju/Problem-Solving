@@ -73,9 +73,9 @@ void solve() {
   // Write your solution here
   int n, x;
   cin >> n >> x;
-  vector<int> v(n, 0);
+  vector<int> v(n, 0);//n
   int mx = INT_MIN;
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < n; ++i) {//n
     cin >> v[i];
     if (i > 0) {
       int diff = abs(v[i] - v[i - 1]);
@@ -84,9 +84,9 @@ void solve() {
       mx = max(mx, v[i]);
     }
   }
-  int diff = 2 * abs(v[n - 1] - x);
-  mx = max(mx, diff);
-  cout << mx << endl;
+  int diff = 2 * abs(v[n - 1] - x);//1
+  mx = max(mx, diff);//1
+  cout << mx << endl;//1
 }
 
 int main() {
