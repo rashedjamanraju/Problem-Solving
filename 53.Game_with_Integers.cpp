@@ -72,11 +72,11 @@ vector<pii> get8Neighbours(int x, int y, int n, int m) {
 void solve() {
   // Write your solution here
   int n;
-  cin >> n;
-  if (n % 3 == 0)
-    cout << "Second" << endl;
+  cin >> n;//1
+  if (n % 3 == 0)//1
+    cout << "Second" << endl;//1
   else
-    cout << "First" << endl;
+    cout << "First" << endl;//1
 }
 
 int main() {
