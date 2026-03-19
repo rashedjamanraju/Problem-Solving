@@ -72,10 +72,10 @@ vector<pii> get8Neighbours(int x, int y, int n, int m) {
 void solve() {
   // Write your solution here
   int n, k;
-  cin >> n >> k;
-  vector<ll> v(n, 0);
-  bool is_sorted = true;
-  for (int i = 0; i < n; ++i) {
+  cin >> n >> k;//1
+  vector<ll> v(n, 0);//n
+  bool is_sorted = true;//1
+  for (int i = 0; i < n; ++i) {//n
     /* code */
     cin >> v[i];
     if (i > 0) {
@@ -85,12 +85,12 @@ void solve() {
     }
   }
   if (is_sorted) {
-    cout << "YES" << endl;
+    cout << "YES" << endl; //1
   } else {
     if (k >= 2) {
-      cout << "YES" << endl;
+      cout << "YES" << endl;//1
     } else {
-      cout << "NO" << endl;
+      cout << "NO" << endl;//1
     }
   }
 }
