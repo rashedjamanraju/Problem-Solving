@@ -1,4 +1,4 @@
-// Problem Link:https://codeforces.com/problemset/problem/1890/A
+// Problem Link:https://codeforces.com/contest/2210/problem/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -73,35 +73,10 @@ void solve() {
   // Write your solution here
   int n;
   cin >> n;
-  vector<int> v(n, 0);           // n
-  map<int, int> mp;              // 2*k
-  for (int i = 0; i < n; ++i) {  // nlogn
-    /* code */
-    cin >> v[i];
-    mp[v[i]]++;
+  for (int i = n; i >= 1; i--) {
+    cout << i << " ";
   }
-
-  if (mp.size() == 1) {  // 1
-    cout << "YES" << endl;
-  } else {
-    if (mp.size() == 2) {  // 1
-      int mn = INT_MAX;
-      int mx = INT_MIN;
-      for (auto each : mp) {
-        mn = min(mn, each.S);
-        mx = max(mx, each.S);
-      }
-      if (mn == mx) {
-        cout << "YES" << endl;
-      } else if (mx == mn + 1) {
-        cout << "YES" << endl;
-      } else {
-        cout << "NO" << endl;
-      }
-    } else {
-      cout << "NO" << endl;
-    }
-  }
+  cout << endl;
 }
 
 int main() {
@@ -114,7 +89,7 @@ int main() {
     solve();
   }
 
-  // solve()
+  // solve();
 
   return 0;
 }
