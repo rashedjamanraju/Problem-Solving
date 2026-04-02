@@ -1,4 +1,4 @@
-// Problem Link:
+// Problem Link: https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -69,38 +69,24 @@ vector<pii> get8Neighbours(int x, int y, int n, int m) {
   return nb;
 }
 
-bool is_possible_ans(vector<ll>& v, ll k, ll mid) {
-  for (ll i = 0; i < v.size(); ++i) {
-    /* code */
-    if (v[i] > mid) return false;
-  }
-  ll count = 1;
+bool is_ok(ll w, ll h, ll n, ll x) {
+  ll a = x / w;
+  ll b = x / h;
 
-  ll current_sum = v[0];
-  for (ll i = 1; i < v.size(); ++i) {
-    if (current_sum + v[i] <= mid) {
-      current_sum += v[i];
-    } else {
-      count++;
-      current_sum = v[i];
-    }
-  }
-  if (count <= k) {
-    return true;
-  } else {
-    return false;
-  }
+  if (a == 0 || b == 0) return false;
+
+  return a >= (n + b - 1) / b;
 }
 
-ll bs(vector<ll>& v, ll k) {
-  ll start = *max_element(v.begin(), v.end());
-  ll end = accumulate(v.begin(), v.end(), 0LL);
+ll bs(ll w, ll h, ll n) {
+  ll start = 1;
+  ll end = max(w, h) * n;
   ll ans = end;
 
   while (start <= end) {
     ll mid = start + (end - start) / 2;
 
-    if (is_possible_ans(v, k, mid)) {
+    if (is_ok(w, h, n, mid)) {
       ans = mid;
       end = mid - 1;
     } else {
@@ -112,14 +98,9 @@ ll bs(vector<ll>& v, ll k) {
 
 void solve() {
   // Write your solution here
-  ll n, k;
-  cin >> n >> k;
-  vector<ll> v(n, 0);
-  for (ll i = 0; i < n; ++i) {
-    /* code */
-    cin >> v[i];
-  }
-  ll ans = bs(v, k);
+  ll w, h, n;
+  cin >> w >> h >> n;
+  ll ans = bs(w, h, n);
   cout << ans << endl;
 }
 
